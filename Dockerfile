@@ -9,7 +9,7 @@ RUN apt-get update && \
     npm install --production && \
     rm -rf /var/lib/apt/lists/* && \
     mv -v presets / && \
-    ln -s /presets /node-sonos-http-api/presets
+    ln -s /presets /node-sonos-http-api/presets && \
     mkdir /settings && \
     ln -s /settings/settings.json /node-sonos-http-api/settings.json && \
     mkdir /cache && \
