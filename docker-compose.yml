@@ -1,0 +1,12 @@
+version: "3"
+services:
+  node-sonos:
+    container_name: node-sonos-http-api
+    build: .
+    network_mode: host
+    volumes:
+      - ./cache:/node-sonos-http-api/cache
+      - ./clips:/node-sonos-http-api/static/clips
+      - ./settings/settings.json:/node-sonos-http-api/settings.json
+      - ./presets/:/node-http-api/presets
+    restart: unless-stopped
